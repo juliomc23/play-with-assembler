@@ -211,7 +211,7 @@ When the user wins the game they should be able to check their time and their po
   - When this player finishes the game, the ranking will be dynamically updated to show your score instead of the previous message
 - When the player finishes the game, the Scoring screen will be displayed with the results of the game.
 - All game processes must be carried out without reloading the page
-- You will not be able to use cookies, localStorage or any similar technology
+- You will not be able to use cookies, only localStorage for saving score data
 - You must store:
   - Current game
     - User name
