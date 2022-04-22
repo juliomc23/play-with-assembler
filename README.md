@@ -25,7 +25,7 @@ In this pill, you will develop several games with JavaScript to improve your ski
 
 ## 2. Develop a game
 
-This project must be developed in teams of 4 people. Each team should choose and develop one of the following games explained below:
+This project must be developed in teams of 3 or 4 people. Each team should choose and develop one of the following games explained below:
 
 ## <b>GAME 1: wordle</b>
 In this game, you will generate a similar game to [Wordle](https://wordle.danielfrg.com/). In this game, the user has to guess the hidden word by picking up the different available letter from the alphabet.
@@ -85,7 +85,7 @@ When the user wins the game they should be able to check their time and their po
 - Improve the design such that it is designed using a mobile-first strategy and responsive
 
 ### <b>GAME 2: Test your reflexes</b>
-This game consists in measuring the number of clicks you can make in a 10 second period.
+This game consists in measuring how many time does it take to click a button.
 
 ### Phase 1
 
