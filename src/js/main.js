@@ -1,5 +1,6 @@
 import { arrayWords } from "./words.js";
-import { getWord } from "./arrayWordsFunctions.js";
+import { getWord, guessWord } from "./arrayWordsFunctions.js";
 
 
 getWord();
+guessWord();
