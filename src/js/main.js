@@ -1,5 +1,5 @@
-import { arrayWord } from "./words.js";
+import { arrayWords } from "./words.js";
+import { getWord } from "./arrayWordsFunctions.js";
 
-arrayWord.forEach(word => {
-    console.log(word)
-})
+
+getWord();

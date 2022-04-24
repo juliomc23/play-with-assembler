@@ -1,4 +1,4 @@
-export const arrayWord = [
+export const arrayWords = [
 "Abuse",
 "Adult",
 "Agent",
