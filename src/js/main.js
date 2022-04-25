@@ -5,7 +5,13 @@ import { arrayWords } from "./words.js";
 let arrayWord = [];
 let maxTries = 0;
 
-// const solutionDiv = document.querySelectorAll('[data-try]');
+const solutionDiv = document.querySelectorAll('[data-try]');
+const keyButton = document.querySelectorAll('[data-key]');
+
+solutionDiv.forEach((div, index) =>{
+    console.log(div, index)
+})
+
 
 //Global Variables
 
@@ -30,8 +36,6 @@ getWord();
  */
 const getValueButton = () => {
 
-    const keyButton = document.querySelectorAll('[data-key]');
-
     keyButton.forEach(key => {
 
         key.addEventListener('click', () => {
@@ -55,10 +59,12 @@ getValueButton();
 /** 
  * Guessing the word
 */
+
+let index = 0;
 const guessWord = (word) => {
 
     console.log(word);
-
+    
     if (maxTries < 5) {
 
         const guessedWord = word.toUpperCase();
@@ -74,14 +80,22 @@ const guessWord = (word) => {
         } else if (!arrayWords.includes(word)) {
             console.log('This word is not in the list');
         } else if (arrayWords.includes(word)) {
+            
+            if (solutionDiv[index].innerText == "") {
+                solutionDiv[index].textContent = word.toUpperCase();
+                index++;
+            }
+
+            
             maxTries++;
+            
         }
-    } else {
+    } else{
         console.log('You lose');
-        maxTries++
+        maxTries++;
     }
 
-    console.log(maxTries);
+    console.log(`tries: ${maxTries}`);
 
 }
 
