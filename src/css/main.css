@@ -3,7 +3,7 @@
 :root {
   --green:#68AC71;
   --lightGreen:#B9CABC;
-  --white:#E8EBEE;
+  --white:white;
   --violet: #837694;
   --black: #252529;
   --yellow:#E09F3E;
@@ -11,15 +11,17 @@
 
 body {
   font-family: 'Acme', sans-serif;
-  background-color: rgba(231, 231, 231, 0.675);
   border: 1px solid green;
   height: 100vh;
   padding: 0;
   margin: 0;
+  background-color: white;
 }
+
 main {
   border: 1px solid red;
   height: 100vh;
+ 
 }
 header {
   display: flex;
@@ -107,12 +109,40 @@ header h1 {
 }
 .circle--empty {
   border: 2px solid var(--lightGreen);
+  color: var(--lightGreen);
+  background-color: var(--white);
 }
 
+/* Keyboard */
+
 .keyboard {
-  border: 1px solid gold;
-  padding: 10px;
-  height: 30vh;
+  width: 100%;
+  /* border: 1px solid gold; */
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  /* height: 30vh; */
+}
+
+.keyboard-row {
+  /* border: 1px solid red; */
+  display: flex;
+  justify-content: center;
+  margin-bottom: 0.2em;
+  height: 2.4em;
+
+}
+.keyboard-key {
+  /* border: solid 1px blue; */
+  border-radius: 50%;
+  width: 2.5em;
+  margin: 0.2em;
+  height: 2.5em;  
+}
+
+#bottom-keyboard-row {
+  padding-right: 10px;
+  padding-left: 10px;
 }
 
 
