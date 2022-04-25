@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -9,74 +10,106 @@
   <script src="https://kit.fontawesome.com/ae63adffc0.js" crossorigin="anonymous"></script>
   <title>Wordle</title>
 </head>
+
 <body>
-  <header>
-    <div class="menu">
-      <i class="fa-solid fa-bars"></i>
-    </div>
-    <h1>Wordle</h1>
-    <div class="settings">
-      <i class="fa-solid fa-gears"></i>
-    </div>
-  </header>
   <main>
-    <section class="game-chart">
-      <div class="game-row">
-        <ul id="first-row">
-          <li></li>
-          <li></li>
-          <li></li>
-          <li></li>
-          <li></li>
-        </ul>
+    <header>
+      <div class="menu">
+        <i class="fa-solid fa-bars"></i>
       </div>
-      <div class="game-row">
-        <ul id="second-row">
-          <li></li>
-          <li></li>
-          <li></li>
-          <li></li>
-          <li></li>
-        </ul>
+      <h1>Wordle</h1>
+      <div class="settings">
+        <i class="fa-solid fa-gears"></i>
       </div>
-      <div class="game-row">
-        <ul id="third-row">
-          <li></li>
-          <li></li>
-          <li></li>
-          <li></li>
-          <li></li>
-        </ul>
+    </header>
+
+    <div id="global">
+      <div class="inputs">
+        <div class="circle-container"  data-try="1">
+          <!-- <div class="circle"></div>
+          <div class="circle"></div>
+          <div class="circle"></div>
+          <div class="circle"></div>
+          <div class="circle"></div> -->
+        </div>
+        <div class="circle-container" data-try="2">
+          <!-- <div class="circle"></div>
+          <div class="circle"></div>
+          <div class="circle"></div>
+          <div class="circle"></div>
+          <div class="circle"></div> -->
+        </div>
+        <div class="circle-container" data-try="3">
+          <!-- <div class="circle"></div>
+          <div class="circle"></div>
+          <div class="circle"></div>
+          <div class="circle"></div>
+          <div class="circle"></div> -->
+        </div>
+        <div class="circle-container" data-try="4">
+          <!-- <div class="circle"></div>
+          <div class="circle"></div>
+          <div class="circle"></div>
+          <div class="circle"></div>
+          <div class="circle"></div> -->
+        </div>
+        <div class="circle-container" data-try="5">
+          <!-- <div class="circle"></div>
+          <div class="circle"></div>
+          <div class="circle"></div>
+          <div class="circle"></div>
+          <div class="circle"></div> -->
+        </div>
+        <div class="circle-container" data-try="6">
+          <!-- <div class="circle"></div>
+          <div class="circle"></div>
+          <div class="circle"></div>
+          <div class="circle"></div>
+          <div class="circle"></div> -->
+        </div>
       </div>
-      <div class="game-row">
-        <ul id="fourth-row">
-          <li></li>
-          <li></li>
-          <li></li>
-          <li></li>
-          <li></li>
-        </ul>
+
+      <div class="buttons-div">
+        <div class="row-buttons">
+          <button data-key="q">q</button>
+          <button data-key="w">w</button>
+          <button data-key="e">e</button>
+          <button data-key="r">r</button>
+          <button data-key="t">t</button>
+          <button data-key="y">y</button>
+          <button data-key="u">u</button>
+          <button data-key="i">i</button>
+          <button data-key="o">o</button>
+          <button data-key="p">p</button>
+        </div>
+        <div class="row-buttons">
+          <button data-key="a">a</button>
+          <button data-key="s">s</button>
+          <button data-key="d">d</button>
+          <button data-key="f">f</button>
+          <button data-key="g">g</button>
+          <button data-key="h">h</button>
+          <button data-key="j">j</button>
+          <button data-key="k">k</button>
+          <button data-key="l">l</button>
+          <button data-key="ñ">ñ</button>
+        </div>
+
+        <div class="row-buttons">
+          <button data-key="send">┘</button>
+          <button data-key="z">z</button>
+          <button data-key="x">x</button>
+          <button data-key="c">c</button>
+          <button data-key="v">v</button>
+          <button data-key="b">b</button>
+          <button data-key="n">n</button>
+          <button data-key="m">m</button>
+          <button data-key="back">←</button>
+        </div>
+        
       </div>
-      <div class="game-row">
-        <ul id="fith-row">
-          <li></li>
-          <li></li>
-          <li></li>
-          <li></li>
-          <li></li>
-        </ul>
-      </div>
-      <div class="game-row">
-        <ul id="sixth-row">
-          <li></li>
-          <li></li>
-          <li></li>
-          <li></li>
-          <li></li>
-        </ul>
-      </div>
-    </section>
-    <section></section>
+    </div>
   </main>
 </body>
+
 </html>

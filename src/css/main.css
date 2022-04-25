@@ -2,3 +2,69 @@
 header {
   display: flex;
 }
+
+main{
+  border: 1px solid red;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#global{
+  border: 1px solid blue;
+  height: 70vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.inputs{
+  height: 75%;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.circle-container{
+  padding: 10px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid red;
+}
+
+.circle{
+  border: 1px solid black;
+  margin: 5px;
+  padding: 20px;
+}
+
+.buttons-div{
+  padding: 10px;
+  display: flex;
+  height: 25%;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.row-buttons{
+  padding: 5px;
+  margin-bottom: 10px;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.row-buttons button{
+  font-size: 20px;
+  width: 10%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
