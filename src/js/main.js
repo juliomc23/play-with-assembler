@@ -8,10 +8,11 @@ let maxTries = 0;
 const solutionDiv = document.querySelectorAll('[data-try]');
 const keyButton = document.querySelectorAll('[data-key]');
 
-solutionDiv.forEach((div, index) =>{
-    console.log(div, index)
-})
-
+//PRUEBAS
+// let currentSolution = "";
+// const nextSolution = "";
+const circle = document.querySelectorAll('[data-circle]');
+//FIn de pruebas
 
 //Global Variables
 
@@ -34,6 +35,7 @@ getWord();
 /**
  * Getting textContent from KeyValues
  */
+let indexWord = 0;
 const getValueButton = () => {
 
     keyButton.forEach(key => {
@@ -43,14 +45,24 @@ const getValueButton = () => {
             arrayWord.push(key.textContent);
 
             if (key.textContent === "┘") {
+                circle[indexWord].innerHTML += "";
+
                 arrayWord.pop();
                 const arrayString = arrayWord.join('');
                 arrayWord = [];
                 guessWord(arrayString);
+
+            } else if (circle[indexWord].innerText === "") {
+                circle[indexWord].textContent += key.textContent;
+                indexWord++;
             }
+
         })
 
+
+
     })
+
 }
 
 getValueButton();
@@ -64,7 +76,7 @@ let index = 0;
 const guessWord = (word) => {
 
     console.log(word);
-    
+
     if (maxTries < 5) {
 
         const guessedWord = word.toUpperCase();
@@ -85,12 +97,9 @@ const guessWord = (word) => {
                 solutionDiv[index].textContent = word.toUpperCase();
                 index++;
             }
-
-            
             maxTries++;
-            
         }
-    } else{
+    } else {
         console.log('You lose');
         maxTries++;
     }
