@@ -42,11 +42,11 @@ const getValueButton = () => {
             arrayWord.push(key.textContent);
 
             if (circle[index].innerText === "") {
-                
+
                 circle[index].textContent += key.textContent.toUpperCase();
 
                 index++;
-            }else{
+            } else {
                 index++;
             }
 
@@ -67,7 +67,6 @@ getValueButton();
 
 const guessWord = (word) => {
 
-    console.log(word);
     const guessedWord = word.toUpperCase();
 
     const solution = localStorage.getItem("solution");
@@ -96,6 +95,31 @@ const guessWord = (word) => {
 }
 
 
+const changeColor = () => {
+    
+    const mixArray = [];
+
+    mixArray.push(arrayWord);
+   
+    const localString = localStorage.getItem("solution").toLowerCase();
+    const splitWord = localString.split('');
+
+    mixArray.push(splitWord);
+
+    mixArray.forEach(word =>{
+        word.forEach((letter, letterIndex) => {
+            
+            if(mixArray[0][letterIndex] === mixArray[1][letterIndex]){
+                
+                circle[letterIndex].style.backgroundColor = "green";
+                
+            }
+        })
+    })
+
+}
+
+
 //Functions---------------------------------------------------------------
 
 
@@ -104,20 +128,24 @@ const guessWord = (word) => {
 //**PRUEBAS */
 
 
-const sendValuesFunction = () =>{
-    sendValues.addEventListener('click', ()=>{
+const sendValuesFunction = () => {
+    sendValues.addEventListener('click', () => {
         const arrayString = arrayWord.join('');
-                arrayWord = [];
-                guessWord(arrayString);
+        changeColor();
+        arrayWord = [];
+        guessWord(arrayString);
+
+
+
     })
 }
 
 sendValuesFunction();
 
 
-const deleteLetterFunction = () =>{
+const deleteLetterFunction = () => {
 
-    deleteLetter.addEventListener('click', ()=>{
+    deleteLetter.addEventListener('click', () => {
         index--;
         circle[index].innerHTML = "";
         arrayWord.pop();
