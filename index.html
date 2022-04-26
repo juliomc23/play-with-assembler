@@ -6,6 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="./src/css/main.css">
   <script src="https://kit.fontawesome.com/ae63adffc0.js" crossorigin="anonymous"></script>
+  <script src="./src/js/username.js" type="module"></script>
   <title>Wordle</title>
 </head>
 <body>
@@ -71,10 +72,10 @@
           <p>¡Venga, Hazlo!</p>
         </div>
         <h2>Chose a user name</h2>
-        <form action="submit" id="username-form">
+        <form id="username-form">
           <label for="username">username</label>
           <input type="text" name="username" id="username">
-          <button type="submit">Start</button>
+          <button id="btnLogin">Start</button>
         </form>
       </article>
       <div class="keyboard inactive">
