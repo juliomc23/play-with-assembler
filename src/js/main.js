@@ -5,9 +5,11 @@ import { arrayWords } from "./words.js";
 let arrayWord = [];
 let maxTries = 0;
 
-const solutionDiv = document.querySelectorAll('[data-try]');
 const keyButton = document.querySelectorAll('[data-key]');
 const circle = document.querySelectorAll('[data-circle]');
+
+const sendValues = document.querySelector('#send');
+const deleteLetter = document.querySelector('#back');
 
 //Global Variables
 
@@ -30,7 +32,7 @@ getWord();
 /**
  * Getting textContent from KeyValues
  */
-let indexWord = 0;
+let index = 0;
 const getValueButton = () => {
 
     keyButton.forEach(key => {
@@ -39,17 +41,13 @@ const getValueButton = () => {
 
             arrayWord.push(key.textContent);
 
-            if (key.textContent === "┘") {
-                circle[indexWord].innerHTML += "";
+            if (circle[index].innerText === "") {
+                
+                circle[index].textContent += key.textContent.toUpperCase();
 
-                arrayWord.pop();
-                const arrayString = arrayWord.join('');
-                arrayWord = [];
-                guessWord(arrayString);
-
-            } else if (circle[indexWord].innerText === "") {
-                circle[indexWord].textContent += key.textContent;
-                indexWord++;
+                index++;
+            }else{
+                index++;
             }
 
         })
@@ -67,7 +65,6 @@ getValueButton();
  * Guessing the word
 */
 
-let index = 0;
 const guessWord = (word) => {
 
     console.log(word);
@@ -90,11 +87,6 @@ const guessWord = (word) => {
         } else if (!arrayWords.includes(word)) {
             console.log('This word is not in the list');
         } else if (arrayWords.includes(word)) {
-
-            if (solutionDiv[index].innerText == "") {
-                solutionDiv[index].textContent = word.toUpperCase();
-                index++;
-            }
             maxTries++;
         }
     }
@@ -103,4 +95,35 @@ const guessWord = (word) => {
 
 }
 
+
 //Functions---------------------------------------------------------------
+
+
+
+
+//**PRUEBAS */
+
+
+const sendValuesFunction = () =>{
+    sendValues.addEventListener('click', ()=>{
+        const arrayString = arrayWord.join('');
+                arrayWord = [];
+                guessWord(arrayString);
+    })
+}
+
+sendValuesFunction();
+
+
+const deleteLetterFunction = () =>{
+
+    deleteLetter.addEventListener('click', ()=>{
+        index--;
+        circle[index].innerHTML = "";
+        arrayWord.pop();
+    })
+}
+
+deleteLetterFunction()
+
+
