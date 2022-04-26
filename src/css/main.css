@@ -150,22 +150,41 @@ header h1 {
 ******************** */
 
 /* Welcome section */
-.wrapper {
-  padding-top: 2em;
-  width: 80%;
-  margin: 0 auto;
-  min-height: 30vh;
-  background-color: rgba(255, 255, 255, 0.728);
-  -webkit-box-shadow: -2px 2px 12px -3px #000000; 
-  box-shadow: -2px 2px 12px -3px #000000;
+
+
+.welcome-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  width: 100%;
+ 
 }
-.welcome h2 {
+.welcome-wrapper h2 {
   text-align: center;
 }
+.welcome-message {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 10em;
+  text-align: center;
+  /* margin-bottom: 1em; */
+  height: fit-content;
+}
+
+.welcome-message h1 {
+  font-size: 2em;
+  margin: 0;
+  color: var(--yellow);
+}
+.welcome-message {
+  
+}
 #username-form {
-  width: 50%;
- display: block;
-  margin: 0 auto;
+  display: flex;
+  height: 7em;
+  flex-direction: column;
+  align-items: center;
 }
 #username-form label {
   opacity: 0.8;
@@ -191,7 +210,6 @@ header h1 {
 #username {
   width: 147px;;
   border: 1px solid black;
-   padding-top: 0.3em; 
    font-family: 'Acme', sans-serif;
    margin-top: 0.8em;
 }
