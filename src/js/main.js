@@ -7,12 +7,7 @@ let maxTries = 0;
 
 const solutionDiv = document.querySelectorAll('[data-try]');
 const keyButton = document.querySelectorAll('[data-key]');
-
-//PRUEBAS
-// let currentSolution = "";
-// const nextSolution = "";
 const circle = document.querySelectorAll('[data-circle]');
-//FIn de pruebas
 
 //Global Variables
 
@@ -76,12 +71,15 @@ let index = 0;
 const guessWord = (word) => {
 
     console.log(word);
+    const guessedWord = word.toUpperCase();
 
-    if (maxTries < 5) {
+    const solution = localStorage.getItem("solution");
 
-        const guessedWord = word.toUpperCase();
+    if (maxTries >= 5 && guessedWord !== solution) {
+        console.log('You lose');
+        maxTries++;
+    } else {
 
-        const solution = localStorage.getItem("solution");
 
         if (guessedWord === solution) {
             console.log('You won!');
@@ -92,16 +90,13 @@ const guessWord = (word) => {
         } else if (!arrayWords.includes(word)) {
             console.log('This word is not in the list');
         } else if (arrayWords.includes(word)) {
-            
+
             if (solutionDiv[index].innerText == "") {
                 solutionDiv[index].textContent = word.toUpperCase();
                 index++;
             }
             maxTries++;
         }
-    } else {
-        console.log('You lose');
-        maxTries++;
     }
 
     console.log(`tries: ${maxTries}`);
