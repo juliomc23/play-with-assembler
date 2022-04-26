@@ -20,106 +20,166 @@
   </header>
   <main>
     <section class="game-wrapper">
-      <div class="letter-chart inactive">
-        <div class="row">
-          <div class="circle circle--correct">S</div>
-          <div class="circle circle--error">P</div>
-          <div class="circle circle--error">A</div>
-          <div class="circle circle--error">R</div>
-          <div class="circle circle--error">K</div>
-        </div>
-        <div class="row">
-          <div class="circle circle--correct">S</div>
-          <div class="circle circle--error">U</div>
-          <div class="circle circle--correct">I</div>
-          <div class="circle circle circle--error">T</div>
-          <div class="circle circle--exsit">W</div>
-        </div>
-        <div class="row">
-          <div class="circle circle--correct">S</div>
-          <div class="circle circle--correct">W</div>
-          <div class="circle circle--correct">I</div>
-          <div class="circle circle--error">F</div>
-          <div class="circle circle--error">T</div>
-        </div>
-        <div class="row">
-          <div class="circle circle--correct">S</div>
-          <div class="circle circle--correct">W</div>
-          <div class="circle circle--correct">I</div>
-          <div class="circle circle--error">N</div>
-          <div class="circle circle--error">G</div>
-        </div>
-        <div class="row">
-          <div class="circle circle--correct">S</div>
-          <div class="circle circle--correct">W</div>
-          <div class="circle circle--correct">I</div>
-          <div class="circle circle--correct">L</div>
-          <div class="circle circle--correct">L</div>
-        </div>
-        <div class="row">
-          <div class="circle circle--empty"></div>
-          <div class="circle circle--empty"></div>
-          <div class="circle circle--empty"></div>
-          <div class="circle circle--empty"></div>
-          <div class="circle circle--empty"></div>
-        </div>
+      <div class="wordle-container">
+        <article class="letter-chart active">
+          <div class="row">
+            <div class="circle circle--correct">S</div>
+            <div class="circle circle--error">P</div>
+            <div class="circle circle--error">A</div>
+            <div class="circle circle--error">R</div>
+            <div class="circle circle--error">K</div>
+          </div>
+          <div class="row">
+            <div class="circle circle--correct">S</div>
+            <div class="circle circle--error">U</div>
+            <div class="circle circle--correct">I</div>
+            <div class="circle circle circle--error">T</div>
+            <div class="circle circle--exsit">W</div>
+          </div>
+          <div class="row">
+            <div class="circle circle--correct">S</div>
+            <div class="circle circle--correct">W</div>
+            <div class="circle circle--correct">I</div>
+            <div class="circle circle--error">F</div>
+            <div class="circle circle--error">T</div>
+          </div>
+          <div class="row">
+            <div class="circle circle--correct">S</div>
+            <div class="circle circle--correct">W</div>
+            <div class="circle circle--correct">I</div>
+            <div class="circle circle--error">N</div>
+            <div class="circle circle--error">G</div>
+          </div>
+          <div class="row">
+            <div class="circle circle--correct">S</div>
+            <div class="circle circle--correct">W</div>
+            <div class="circle circle--correct">I</div>
+            <div class="circle circle--correct">L</div>
+            <div class="circle circle--correct">L</div>
+          </div>
+          <div class="row">
+            <div class="circle circle--empty"></div>
+            <div class="circle circle--empty"></div>
+            <div class="circle circle--empty"></div>
+            <div class="circle circle--empty"></div>
+            <div class="circle circle--empty"></div>
+          </div>
+        </article>
+        <article class="keyboardnactive">
+          <div class="keyboard-wrapper">
+            <div class="keyboard-row">
+              <button class="keyboard-key circle--empty">Q</button>
+              <button class="keyboard-key circle--correct">W</button>
+              <button class="keyboard-key circle--error">E</button>
+              <button class="keyboard-key circle--error">R</button>
+              <button class="keyboard-key circle--error">T</button>
+              <button class="keyboard-key circle--empty">Y</button>
+              <button class="keyboard-key circle--error">U</button>
+              <button class="keyboard-key circle--correct">I</button>
+              <button class="keyboard-key circle--empty">O</button>
+              <button class="keyboard-key circle--error">P</button>
+            </div>
+            <div class="keyboard-row">
+              <div class="empty-left"></div>
+              <button class="keyboard-key circle--correct">A</button>
+              <button class="keyboard-key circle--correct">S</button>
+              <button class="keyboard-key circle--empty">D</button>
+              <button class="keyboard-key circle--correct">F</button>
+              <button class="keyboard-key circle--correct">G</button>
+              <button class="keyboard-key circle--empty">H</button>
+              <button class="keyboard-key circle--empty">J</button>
+              <button class="keyboard-key circle--correct">K</button>
+              <button class="keyboard-key circle--correct">L</button>
+              <div class="empty-right"></div>
+            </div>
+            <div class="keyboard-row"'>
+              <button class="keyboard-key circle--empty">
+                <i class="fa-solid fa-arrow-left-long"></i>
+              </button>
+              <button class="keyboard-key circle--empty">Z</button>
+              <button class="keyboard-key circle--empty">X</button>
+              <button class="keyboard-key circle--empty">C</button>
+              <button class="keyboard-key circle--empty">V</button>
+              <button class="keyboard-key circle--empty">B</button>
+              <button class="keyboard-key circle--error">N</button>
+              <button class="keyboard-key circle--empty">M</button>
+              <button class="keyboard-key circle--empty">M</button>
+              <button class="keyboard-key circle--empty">
+                <i class="fa-solid fa-xmark"></i>
+              </button>
+            </div>
+          </div>
+        </article>
       </div>
-      <article class="welcome-wrapper active">
-        <div class="welcome-message">
-          <h1>Hello Guest</h1>
-          <p>You can play as a guest, or log-in to create a personalized scoreboard</p>
-          <p>¡Venga, Hazlo!</p>
+      <article class="welcome inactive">
+        <div class="welcome-wrapper">
+          <div class="welcome-message">
+            <h1>Hello Guest</h1>
+            <p>You can play as a guest, or log-in to create a personalized scoreboard</p>
+            <p>¡Venga, Hazlo!</p>
+          </div>
+          <h2>Chose a user name</h2>
+          <form action="submit" id="username-form">
+            <label for="username">username</label>
+            <input type="text" name="username" id="username">
+            <button type="submit" class="btn-primary">Start</button>
+          </form>
         </div>
-        <h2>Chose a user name</h2>
-        <form action="submit" id="username-form">
-          <label for="username">username</label>
-          <input type="text" name="username" id="username">
-          <button type="submit">Start</button>
-        </form>
       </article>
-      <div class="keyboard inactive">
-        <div class="keyboard-row">
-          <button class="keyboard-key circle--empty">Q</button>
-          <button class="keyboard-key circle--correct">W</button>
-          <button class="keyboard-key circle--error">E</button>
-          <button class="keyboard-key circle--error">R</button>
-          <button class="keyboard-key circle--error">T</button>
-          <button class="keyboard-key circle--empty">Y</button>
-          <button class="keyboard-key circle--error">U</button>
-          <button class="keyboard-key circle--correct">I</button>
-          <button class="keyboard-key circle--empty">O</button>
-          <button class="keyboard-key circle--error">P</button>
+      <article class="user-result inactive">
+        <div class="user-result-wrapper">
+          <div class="result-card">
+            <div class="result-message">
+              <h1>You won</h1>
+              <i id='win-icon' class="fa-solid fa-trophy-star"></i> 
+              <!-- <i class="fa-solid fa-face-disappointed"></i> -->
+              <p>Well done, it took you 15 seconds</p>
+              <button class="btn-primary">Play again</button>
+            </div>
+          </div>
         </div>
-        <div class="keyboard-row">
-          <div class="empty-left"></div>
-          <button class="keyboard-key circle--correct">A</button>
-          <button class="keyboard-key circle--correct">S</button>
-          <button class="keyboard-key circle--empty">D</button>
-          <button class="keyboard-key circle--correct">F</button>
-          <button class="keyboard-key circle--correct">G</button>
-          <button class="keyboard-key circle--empty">H</button>
-          <button class="keyboard-key circle--empty">J</button>
-          <button class="keyboard-key circle--correct">K</button>
-          <button class="keyboard-key circle--correct">L</button>
-          <div class="empty-right"></div>
+      </article>
+      <article class="scoreboard inactive">
+        <div class="scoreboard-wrapper">
+          <h3>User scroes</h3>
+          <div class="scoreboard-container">
+            <div class="user-scoreboard">
+              <h4>Jesus</h4>
+              <p>15 seconds</p>
+            </div>
+            <div class="user-scoreboard">
+              <h4>Sefi</h4>
+              <p>15 seconds</p>
+            </div>
+            <div class="user-scoreboard">
+              <h4>Julio</h4>
+              <p>13 seconds</p>
+            </div>
+            <div class="user-scoreboard">
+              <h4>Andrew</h4>
+              <p>25 seconds</p>
+            </div>
+            <div class="user-scoreboard">
+              <h4>Mark</h4>
+              <p>25 seconds</p>
+            </div>
+          </div>
         </div>
-        <div class="keyboard-row"'>
-          <button class="keyboard-key circle--empty">
-            <i class="fa-solid fa-arrow-left-long"></i>
-          </button>
-          <button class="keyboard-key circle--empty">Z</button>
-          <button class="keyboard-key circle--empty">X</button>
-          <button class="keyboard-key circle--empty">C</button>
-          <button class="keyboard-key circle--empty">V</button>
-          <button class="keyboard-key circle--empty">B</button>
-          <button class="keyboard-key circle--error">N</button>
-          <button class="keyboard-key circle--empty">M</button>
-          <button class="keyboard-key circle--empty">M</button>
-          <button class="keyboard-key circle--empty">
-            <i class="fa-solid fa-xmark"></i>
-          </button>
+      </article>
+      <article class="instruction">
+        <div class="instruction-wrapper">
+          <h2>What are the rules of Wordle?</h2>
+          <p>You have to guess the Wordle in six goes or less</p>
+          <p>Every word you enter must be in the word list. That hasn't been disclosed, but presumably it's based on a dictionary.</p>
+          <p>A correct letter turns green</p>
+          <p>A correct letter in the wrong place turns yellow</p>
+          <p>An incorrect letter turns gray</p>
+          <p>Letters can be used more than once</p>
+          <div class="good-luck">
+            <p>Good Luck <i class="fa-solid fa-face-grin-beam"></i></p>
+          </div>
         </div>
-      </div>
+      </article>
     </section>
   </main>
 </body>
