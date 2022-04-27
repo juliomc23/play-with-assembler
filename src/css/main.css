@@ -42,7 +42,7 @@ header h1 {
 }
 
 .game-wrapper {
-  /* height: 100vh; */
+  height: 100vh;
   border: 1px solid yellow;
   display: -ms-flexbox;
   display: -webkit-flex;
@@ -282,8 +282,9 @@ header h1 {
 }
 .scoreboard-container {
   display: flex;
-  flex-wrap: wrap;
-  justify-content: space-evenly;
+  /* flex-wrap: wrap; */
+  flex-direction: column;
+  /* justify-content: space-evenly */
 }
 .user-scoreboard {
   text-align: center;
@@ -291,7 +292,7 @@ header h1 {
 .user-scoreboard h4 {
   color: var(--yellow);
   font-size: 1.3em;
-  overflow-x: scroll;
+  /* overflow-x: scroll; */
 }
 
 @media only screen and (min-width: 768px) {
@@ -307,12 +308,12 @@ header h1 {
     height: 15em;
   }
   .scoreboard {
-    height: 17em;
+    /* height: 37em; */
+    margin-left: 5rem;
+    margin-top: -19rem;
   }
-  .scoreboard-wrapper {
+  /* .scoreboard-wrapper {
     height: 100%;
-  }
-  .scoreboard-container {
-
-  }
+  } */
+ 
 }
