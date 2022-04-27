@@ -10,7 +10,7 @@ In this work, the Wordle game has been developed.
 ![desktop-preview.](/src/img/preview-desktop.jpg)<br>
 ![desktop-preview.](/src/img/preview-desktop2.jpg)
 
-## Emphasis
+## Work team
 * [Julio Macias](https://github.com/juliomc23)
 * [Sefi Cohen](https://github.com/seficohen1)
 * [Jesús Herrera](https://github.com/Jesusjha)
