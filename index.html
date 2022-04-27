@@ -22,7 +22,7 @@
   <main>
     <section class="game-wrapper">
       <div class="wordle-container">
-        <article class="letter-chart active">
+        <article id="letter-board" class="letter-chart inactive">
           <div class="row">
             <div class="circle circle--correct">S</div>
             <div class="circle circle--error">P</div>
@@ -66,7 +66,7 @@
             <div class="circle circle--empty"></div>
           </div>
         </article>
-        <article class="keyboardnactive">
+        <article id="keyboard" class="keyboardn inactive">
           <div class="keyboard-wrapper">
             <div class="keyboard-row">
               <button class="keyboard-key circle--empty">Q</button>
@@ -112,7 +112,7 @@
           </div>
         </article>
       </div>
-      <article class="welcome inactive">
+      <article id="welcome" class="welcome active">
         <div class="welcome-wrapper">
           <div class="welcome-message">
             <h1>Hello Guest</h1>
@@ -123,7 +123,7 @@
           <form action="submit" id="username-form">
             <label for="username">username</label>
             <input type="text" name="username" id="username">
-            <button type="submit" class="btn-primary">Start</button>
+            <button type="submit" class="btn-primary" id="btn-start">Start</button>
           </form>
         </div>
       </article>
