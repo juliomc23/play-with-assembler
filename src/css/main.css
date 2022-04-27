@@ -295,6 +295,8 @@ header h1 {
   /* overflow-x: scroll; */
 }
 
+
+
 @media only screen and (min-width: 768px) {
   
   .game-wrapper{
@@ -311,6 +313,12 @@ header h1 {
     /* height: 37em; */
     margin-left: 5rem;
     margin-top: -19rem;
+  }
+
+  .score-width {
+    height: 33rem;
+    overflow: hidden;
+    overflow-y: scroll;
   }
   /* .scoreboard-wrapper {
     height: 100%;
