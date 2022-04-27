@@ -42,7 +42,7 @@ header h1 {
 }
 
 .game-wrapper {
-  height: 100vh;
+  /* height: 100vh; */
   border: 1px solid yellow;
   display: -ms-flexbox;
   display: -webkit-flex;
@@ -63,7 +63,28 @@ header h1 {
   -ms-flex-align: center;
   align-items: center;
   }
-
+.wordle-container {
+  /* height: 100vh; */
+  border: 1px solid yellow;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  -webkit-justify-content: space-around;
+  -ms-flex-pack: distribute;
+  justify-content: space-around;
+  -webkit-align-content: center;
+  -ms-flex-line-pack: center;
+  align-content: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
   .letter-chart {
     border: 1px solid pink;
     padding: 20px;
@@ -115,13 +136,11 @@ header h1 {
 
 /* Keyboard */
 
-.keyboard {
+.keyboard-wrapper {
   width: 100%;
-  /* border: 1px solid gold; */
-  padding: 20px;
   display: flex;
   flex-direction: column;
-  /* height: 30vh; */
+  margin-top: 2em;
 }
 
 .keyboard-row {
@@ -137,7 +156,7 @@ header h1 {
   border-radius: 50%;
   width: 2.5em;
   margin: 0.2em;
-  height: 2.5em;  
+  height: 2.5em;
 }
 
 #bottom-keyboard-row {
@@ -150,7 +169,6 @@ header h1 {
 ******************** */
 
 /* Welcome section */
-
 
 .welcome-wrapper {
   display: flex;
@@ -177,9 +195,7 @@ header h1 {
   margin: 0;
   color: var(--yellow);
 }
-.welcome-message {
-  
-}
+
 #username-form {
   display: flex;
   height: 7em;
@@ -190,7 +206,7 @@ header h1 {
   opacity: 0.8;
   font-size: 0.8em;
 }
-#username-form button {
+.btn-primary {
   width: 153px;
   margin-top: 0.7em;
   background-color: #000000;
@@ -203,13 +219,100 @@ header h1 {
   cursor: pointer;
   font-family: 'Acme', sans-serif;
 }
-#username-form button:hover {
+.btn-primary:hover {
   color:#5DA95F;
-  
+
 }
 #username {
   width: 147px;;
   border: 1px solid black;
    font-family: 'Acme', sans-serif;
    margin-top: 0.8em;
+}
+
+/* Scoreboard and result card */
+
+.user-result-wrapper {
+  /* border: solid 1px red; */
+  padding: 10px;
+  /* width: 100%; */
+  /* height: 100%; */
+  display: flex;
+  flex-direction: column;
+}
+
+.result-card {
+  /* border: solid 1px blue; */
+  width: 15em;
+  padding: 1em;
+  box-shadow: 5px -2px 19px -9px rgba(0,0,0,0.89);
+  -webkit-box-shadow: 5px -2px 19px -9px rgba(0,0,0,0.89);
+  -moz-box-shadow: 5px -2px 19px -9px rgba(0,0,0,0.89);
+  border-radius: 3px;
+  /* width: 20em; */
+}
+.result-message {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.scoreboard p {
+  font-size: 0.7em;
+  font-weight: lighter;
+}
+.result-message h1 {
+  font-size: 2em;
+}
+.scoreboard {
+  width: 20em;
+  height: 20em;
+}
+.scoreboard-wrapper {
+  /* border: solid 1px brown; */
+  display: flex;
+  flex-direction: column;
+  box-shadow: 5px -2px 19px -9px rgba(0,0,0,0.89);
+  -webkit-box-shadow: 5px -2px 19px -9px rgba(0,0,0,0.89);
+  -moz-box-shadow: 5px -2px 19px -9px rgba(0,0,0,0.89);
+  border-radius: 3px;
+}
+.scoreboard-wrapper h3 {
+  font-size: 1.7em;
+  text-align: center;
+}
+.scoreboard-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+.user-scoreboard {
+  text-align: center;
+}
+.user-scoreboard h4 {
+  color: var(--yellow);
+  font-size: 1.3em;
+  overflow-x: scroll;
+}
+
+@media only screen and (min-width: 768px) {
+  
+  .game-wrapper{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+  .result-card {
+    width: 30em;
+    height: 15em;
+  }
+  .scoreboard {
+    height: 17em;
+  }
+  .scoreboard-wrapper {
+    height: 100%;
+  }
+  .scoreboard-container {
+
+  }
 }
