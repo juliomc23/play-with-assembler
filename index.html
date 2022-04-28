@@ -16,7 +16,7 @@
   <main>
     <section class="game-wrapper">
       <div class="wordle-container">
-        <article id="letter-board" class="letter-chart inactive">
+        <article id="letter-board" class="letter-chart active">
           <div class="row">
             <div class="circle circle--correct" data-circle id="1"></div>
             <div class="circle circle--error" data-circle id="2"></div>
@@ -62,7 +62,7 @@
             <div class="circle" data-circle id="31" style="display: none;"></div>
           </div>
         </article>
-        <article id="keyboard" class="keyboardn inactive">
+        <article id="keyboard" class="keyboardn active">
           <div class="keyboard-wrapper">
             <div class="keyboard-row">
               <button class="keyboard-key circle--empty" data-key="q">Q</button>
@@ -90,7 +90,7 @@
               <div class="empty-right"></div>
             </div>
             <div class="keyboard-row"'>
-              <button class="keyboard-key circle--empty">
+              <button class="keyboard-key circle--empty" id="send">
                 <i class="fa-solid fa-arrow-left-long"></i>
               </button>
               <button class="keyboard-key circle--empty" data-key="z">Z</button>
@@ -100,8 +100,7 @@
               <button class="keyboard-key circle--empty" data-key="b">B</button>
               <button class="keyboard-key circle--error" data-key="n">N</button>
               <button class="keyboard-key circle--empty" data-key="m">M</button>
-              <button class="keyboard-key circle--empty" data-key="q">M</button>
-              <button class="keyboard-key circle--empty">
+              <button class="keyboard-key circle--empty" id="back">
                 <i class="fa-solid fa-xmark"></i>
               </button>
             </div>

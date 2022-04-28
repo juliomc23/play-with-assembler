@@ -102,9 +102,10 @@ header h1 {
 
 .circle {
   display: flex;
-  /* border: 1px solid red; */
+  border: 1px solid black;
   justify-content: center;
   align-items: center;
+  color: black;
 
 
   margin: 0.2em;
@@ -114,26 +115,22 @@ header h1 {
   border-radius: 50%;
 }
 .circle--correct {
-  color: var(--white);
-  background-color: var(--green);
-  border: 2px solid var(--green);
+  color: black;
+  /* background-color: var(--green); */
+  /* border: 2px solid var(--green); */
 }
 .circle--error {
-  color: var(--violet);
-  background-color: var(--white);
-  border: 2px solid var(--violet);
+  color: balck;
+  /* background-color: var(--white); */
+  /* border: 2px solid var(--violet); */
 }
 .circle--exsit {
-  color: var(--white);
-  background-color: var(--yellow);
-  border: 1px solid var(--yellow);
+  color: black;
+  /* background-color: var(--yellow); */
+  /* border: 1px solid var(--yellow); */
   /* border: 2px solid var(--black); */
 }
-.circle--empty {
-  border: 2px solid var(--lightGreen);
-  color: var(--lightGreen);
-  background-color: var(--white);
-}
+
 
 /* Keyboard */
 
@@ -154,6 +151,8 @@ header h1 {
 }
 .keyboard-key {
   /* border: solid 1px blue; */
+  border: 1px solid black;
+  color: black;
   border-radius: 50%;
   width: 2.5em;
   margin: 0.2em;
