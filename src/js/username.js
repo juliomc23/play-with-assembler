@@ -7,7 +7,6 @@ const scoreBoard = document.getElementById("score-board");
 
 const scoreBoardContainer = document.getElementById("scoreboard-container");
 let userScores = [];
-
 if (localStorage.length !== 0) {
     userScores = JSON.parse(localStorage.getItem("username"));
 }

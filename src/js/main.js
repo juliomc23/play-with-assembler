@@ -150,13 +150,6 @@ const changeColor = () => {
 }
 
 
-//Functions---------------------------------------------------------------
-
-
-
-
-//**PRUEBAS */
-
 
 const sendValuesFunction = () => {
     sendValues.addEventListener('click', () => {
@@ -185,3 +178,4 @@ const deleteLetterFunction = () => {
 deleteLetterFunction()
 
 
+//Functions---------------------------------------------------------------
