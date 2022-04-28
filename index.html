@@ -1,109 +1,105 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="./src/css/main.css">
+  <script src="./src/js/main.js" type="module"></script>
   <script src="https://kit.fontawesome.com/ae63adffc0.js" crossorigin="anonymous"></script>
   <title>Wordle</title>
 </head>
+
 <body>
-  <header>
-    <div class="menu">
-      <i class="fa-solid fa-bars"></i>
-    </div>
-    <h1>Wordle</h1>
-    <div class="settings">
-      <i class="fa-solid fa-gears"></i>
-    </div>
-  </header>
   <main>
     <section class="game-wrapper">
       <div class="wordle-container">
         <article class="letter-chart active">
           <div class="row">
-            <div class="circle circle--correct">S</div>
-            <div class="circle circle--error">P</div>
-            <div class="circle circle--error">A</div>
-            <div class="circle circle--error">R</div>
-            <div class="circle circle--error">K</div>
+            <div class="circle circle--correct" data-circle id="1"></div>
+            <div class="circle circle--error" data-circle id="2"></div>
+            <div class="circle circle--error" data-circle id="3"></div>
+            <div class="circle circle--error" data-circle id="4"></div>
+            <div class="circle circle--error" data-circle id="5"></div>
           </div>
           <div class="row">
-            <div class="circle circle--correct">S</div>
-            <div class="circle circle--error">U</div>
-            <div class="circle circle--correct">I</div>
-            <div class="circle circle circle--error">T</div>
-            <div class="circle circle--exsit">W</div>
+            <div class="circle circle--correct" data-circle id="6"></div>
+            <div class="circle circle--error" data-circle id="7"></div>
+            <div class="circle circle--correct" data-circle id="8"></div>
+            <div class="circle circle circle--error" data-circle id="9"></div>
+            <div class="circle circle--exsit" data-circle id="10"></div>
           </div>
           <div class="row">
-            <div class="circle circle--correct">S</div>
-            <div class="circle circle--correct">W</div>
-            <div class="circle circle--correct">I</div>
-            <div class="circle circle--error">F</div>
-            <div class="circle circle--error">T</div>
+            <div class="circle circle--correct" data-circle id="11"></div>
+            <div class="circle circle--correct" data-circle id="12"></div>
+            <div class="circle circle--correct" data-circle id="13"></div>
+            <div class="circle circle--error" data-circle id="14"></div>
+            <div class="circle circle--error" data-circle id="15"></div>
           </div>
           <div class="row">
-            <div class="circle circle--correct">S</div>
-            <div class="circle circle--correct">W</div>
-            <div class="circle circle--correct">I</div>
-            <div class="circle circle--error">N</div>
-            <div class="circle circle--error">G</div>
+            <div class="circle circle--correct" data-circle id="16"></div>
+            <div class="circle circle--correct" data-circle id="17"></div>
+            <div class="circle circle--correct" data-circle id="18"></div>
+            <div class="circle circle--error" data-circle id="19"></div>
+            <div class="circle circle--error" data-circle id="20"></div>
           </div>
           <div class="row">
-            <div class="circle circle--correct">S</div>
-            <div class="circle circle--correct">W</div>
-            <div class="circle circle--correct">I</div>
-            <div class="circle circle--correct">L</div>
-            <div class="circle circle--correct">L</div>
+            <div class="circle circle--correct" data-circle id="21"></div>
+            <div class="circle circle--correct" data-circle id="22"></div>
+            <div class="circle circle--correct" data-circle id="23"></div>
+            <div class="circle circle--correct" data-circle id="24"></div>
+            <div class="circle circle--correct" data-circle id="25"></div>
           </div>
           <div class="row">
-            <div class="circle circle--empty"></div>
-            <div class="circle circle--empty"></div>
-            <div class="circle circle--empty"></div>
-            <div class="circle circle--empty"></div>
-            <div class="circle circle--empty"></div>
+            <div class="circle circle--empty" data-circle id="26"></div>
+            <div class="circle circle--empty" data-circle id="27"></div>
+            <div class="circle circle--empty" data-circle id="28"></div>
+            <div class="circle circle--empty" data-circle id="29"></div>
+            <div class="circle circle--empty" data-circle id="30"></div>
+
+            <div class="circle" data-circle id="31" style="display: none;"></div>
           </div>
         </article>
         <article class="keyboardnactive">
           <div class="keyboard-wrapper">
             <div class="keyboard-row">
-              <button class="keyboard-key circle--empty">Q</button>
-              <button class="keyboard-key circle--correct">W</button>
-              <button class="keyboard-key circle--error">E</button>
-              <button class="keyboard-key circle--error">R</button>
-              <button class="keyboard-key circle--error">T</button>
-              <button class="keyboard-key circle--empty">Y</button>
-              <button class="keyboard-key circle--error">U</button>
-              <button class="keyboard-key circle--correct">I</button>
-              <button class="keyboard-key circle--empty">O</button>
-              <button class="keyboard-key circle--error">P</button>
+              <button class="keyboard-key circle--empty" data-key="q">Q</button>
+              <button class="keyboard-key circle--correct" data-key="w">W</button>
+              <button class="keyboard-key circle--error" data-key="e">E</button>
+              <button class="keyboard-key circle--error" data-key="r">R</button>
+              <button class="keyboard-key circle--error" data-key="t">T</button>
+              <button class="keyboard-key circle--empty" data-key="y">Y</button>
+              <button class="keyboard-key circle--error" data-key="u">U</button>
+              <button class="keyboard-key circle--correct" data-key="i">I</button>
+              <button class="keyboard-key circle--empty" data-key="o">O</button>
+              <button class="keyboard-key circle--error" data-key="p">P</button>
             </div>
             <div class="keyboard-row">
               <div class="empty-left"></div>
-              <button class="keyboard-key circle--correct">A</button>
-              <button class="keyboard-key circle--correct">S</button>
-              <button class="keyboard-key circle--empty">D</button>
-              <button class="keyboard-key circle--correct">F</button>
-              <button class="keyboard-key circle--correct">G</button>
-              <button class="keyboard-key circle--empty">H</button>
-              <button class="keyboard-key circle--empty">J</button>
-              <button class="keyboard-key circle--correct">K</button>
-              <button class="keyboard-key circle--correct">L</button>
+              <button class="keyboard-key circle--correct" data-key="a">A</button>
+              <button class="keyboard-key circle--correct" data-key="s">S</button>
+              <button class="keyboard-key circle--empty" data-key="d">D</button>
+              <button class="keyboard-key circle--correct" data-key="f">F</button>
+              <button class="keyboard-key circle--correct" data-key="g">G</button>
+              <button class="keyboard-key circle--empty" data-key="h">H</button>
+              <button class="keyboard-key circle--empty" data-key="j">J</button>
+              <button class="keyboard-key circle--correct" data-key="k">K</button>
+              <button class="keyboard-key circle--correct" data-key="l">L</button>
               <div class="empty-right"></div>
             </div>
             <div class="keyboard-row"'>
               <button class="keyboard-key circle--empty">
                 <i class="fa-solid fa-arrow-left-long"></i>
               </button>
-              <button class="keyboard-key circle--empty">Z</button>
-              <button class="keyboard-key circle--empty">X</button>
-              <button class="keyboard-key circle--empty">C</button>
-              <button class="keyboard-key circle--empty">V</button>
-              <button class="keyboard-key circle--empty">B</button>
-              <button class="keyboard-key circle--error">N</button>
-              <button class="keyboard-key circle--empty">M</button>
-              <button class="keyboard-key circle--empty">M</button>
+              <button class="keyboard-key circle--empty" data-key="z">Z</button>
+              <button class="keyboard-key circle--empty" data-key="x">X</button>
+              <button class="keyboard-key circle--empty" data-key="c">C</button>
+              <button class="keyboard-key circle--empty" data-key="v">V</button>
+              <button class="keyboard-key circle--empty" data-key="b">B</button>
+              <button class="keyboard-key circle--error" data-key="n">N</button>
+              <button class="keyboard-key circle--empty" data-key="m">M</button>
+              <button class="keyboard-key circle--empty" data-key="q">M</button>
               <button class="keyboard-key circle--empty">
                 <i class="fa-solid fa-xmark"></i>
               </button>
@@ -181,6 +177,8 @@
         </div>
       </article>
     </section>
+
   </main>
 </body>
+
 </html>
