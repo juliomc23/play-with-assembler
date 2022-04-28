@@ -8,6 +8,7 @@
   <link rel="stylesheet" href="./src/css/main.css">
   <script src="./src/js/main.js" type="module"></script>
   <script src="https://kit.fontawesome.com/ae63adffc0.js" crossorigin="anonymous"></script>
+  <script src="./src/js/username.js" type="module"></script>
   <title>Wordle</title>
 </head>
 
@@ -15,7 +16,7 @@
   <main>
     <section class="game-wrapper">
       <div class="wordle-container">
-        <article class="letter-chart active">
+        <article id="letter-board" class="letter-chart inactive">
           <div class="row">
             <div class="circle circle--correct" data-circle id="1"></div>
             <div class="circle circle--error" data-circle id="2"></div>
@@ -61,7 +62,7 @@
             <div class="circle" data-circle id="31" style="display: none;"></div>
           </div>
         </article>
-        <article class="keyboardnactive">
+        <article id="keyboard" class="keyboardn inactive">
           <div class="keyboard-wrapper">
             <div class="keyboard-row">
               <button class="keyboard-key circle--empty" data-key="q">Q</button>
@@ -107,7 +108,7 @@
           </div>
         </article>
       </div>
-      <article class="welcome inactive">
+      <article id="welcome" class="welcome active">
         <div class="welcome-wrapper">
           <div class="welcome-message">
             <h1>Hello Guest</h1>
@@ -118,7 +119,7 @@
           <form action="submit" id="username-form">
             <label for="username">username</label>
             <input type="text" name="username" id="username">
-            <button type="submit" class="btn-primary">Start</button>
+            <button type="submit" class="btn-primary" id="btn-start">Start</button>
           </form>
         </div>
       </article>
@@ -135,30 +136,10 @@
           </div>
         </div>
       </article>
-      <article class="scoreboard inactive">
+      <article id="score-board" class="scoreboard inactive">
         <div class="scoreboard-wrapper">
-          <h3>User scroes</h3>
-          <div class="scoreboard-container">
-            <div class="user-scoreboard">
-              <h4>Jesus</h4>
-              <p>15 seconds</p>
-            </div>
-            <div class="user-scoreboard">
-              <h4>Sefi</h4>
-              <p>15 seconds</p>
-            </div>
-            <div class="user-scoreboard">
-              <h4>Julio</h4>
-              <p>13 seconds</p>
-            </div>
-            <div class="user-scoreboard">
-              <h4>Andrew</h4>
-              <p>25 seconds</p>
-            </div>
-            <div class="user-scoreboard">
-              <h4>Mark</h4>
-              <p>25 seconds</p>
-            </div>
+          <h3>User scores</h3>
+          <div id="scoreboard-container" class="scoreboard-container">
           </div>
         </div>
       </article>
